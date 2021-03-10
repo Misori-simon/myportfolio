@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+root {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-size: 100%;
+  outline: 0;
+  border: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
+.body {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

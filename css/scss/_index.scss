@@ -1,0 +1,238 @@
+//navigations
+
+
+.header {
+  background-color: gray;
+  padding: 1rem;
+}
+
+.logo-wrap {
+  margin: 1rem;
+}
+
+.social-icon-item {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.section {
+  padding: 1rem;
+
+  .social-wrap {
+    margin: 0.5rem 0;
+  }
+
+  .social-header {
+    font-size: 1rem;
+  }
+
+  .section-header {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-image {
+    background-color: aquamarine;
+    min-height: 12rem;
+    position: relative;
+  }
+
+  .project-title {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .project-languages {
+    padding: 0.5rem 0;
+  }
+
+  .language-item {
+    font-size: small;
+    color: #fff;
+    padding: 0.2rem;
+    background-color: black;
+  }
+
+  .view-project {
+    background-color: black;
+    text-align: center;
+    padding: 0.2rem 0;
+    margin-bottom: 1rem;
+
+    button {
+      font-size: small;
+      background-color: transparent;
+      color: white;
+    }
+  }
+
+  .project-modal {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    background-color: rgba($color: #e9d3d3, $alpha: 1);
+    padding-bottom: 1rem;
+
+    .main-image {
+      position: relative;
+      min-height: 12rem;
+      background-color: yellowgreen;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 1.4rem;
+      height: 2rem;
+      width: 2rem;
+      text-align: center;
+      background-color: black;
+      color: white;
+    }
+
+    .modal-gallery-btn-wrap {
+      padding: 0 0.5rem;
+    }
+
+    .project-gallery {
+      padding: 0.5rem 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .gallery-item {
+      display: inline-block;
+      min-width: 30%;
+      min-height: 4rem;
+      background-color: black;
+    }
+
+    .btn-with-icon {
+      display: block;
+      background-color: black;
+      color: white;
+      margin: 0.5rem 0;
+      text-align: center;
+      padding: 0.5rem 0;
+      font-size: small;
+      font-weight: bold;
+      position: relative;
+
+      .project-link-icon {
+        position: absolute;
+        right: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+
+    .project-info {
+      margin-top: 1rem;
+      padding: 0 0.5rem;
+    }
+
+    .project-modal-title {
+      font-size: 1.3rem;
+    }
+  }
+
+  .my-resume {
+    margin: 0.5rem 0;
+
+    a {
+      background-color: black;
+      display: inline-block;
+      color: white;
+      padding: 1rem 2rem;
+    }
+  }
+
+  .technical-info-item {
+    padding: 0.5rem 0 1.2rem 0;
+    border-bottom: 1px solid black;
+  }
+
+  .technical-header {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+
+  .technical-item {
+    font-size: small;
+    padding: 0.2rem 1rem 0.2rem 0;
+  }
+
+  .contact-header {
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  .contact-form {
+    margin: 1.5rem 0 1rem;
+  }
+
+  .form-group {
+    input,
+    textarea {
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    textarea {
+      font-size: 1.2rem;
+    }
+
+    button {
+      background-color: yellow;
+      padding: 1rem;
+      width: 100%;
+      font-size: small;
+      font-weight: bold;
+    }
+  }
+}
+
+.intro {
+  .intro-header {
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+  }
+}
+
+.contact {
+  background-color: black;
+
+  p {
+    color: white;
+    font-size: 0.8rem;
+  }
+}
+
+.footer {
+  padding: 0 1rem 1rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: small;
+
+  .my-email {
+    padding: 0.5rem 0;
+  }
+
+  a {
+    color: white;
+  }
+
+  .bottom-footer {
+    margin: 0.5rem 0;
+    padding: 1rem 0 0.5rem;
+    border-top: 1px solid white;
+  }
+}

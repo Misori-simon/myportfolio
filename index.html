@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <title>Home</title>
 </head>
-<body>
-  <header>
+<body class="body">
+  <header class="header">
     <div class="logo-wrap">
       <img src="images/logo.png" alt="logo">
     </div>
@@ -32,22 +33,24 @@
         <h4 class="social-header">My networks</h4>
         <div class="social-icon-wrap">
           <span class="social-icon-item">
-            <a href="#"></a>
+            <a href="https://github.com/Misori-simon/">
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
           </span>
           <span class="social-icon-item">
-            <a href="#"></a>
+            <a href="https://cm.linkedin.com/in/misori-simon-05906219b">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
           </span>
           <span class="social-icon-item">
-            <a href="#"></a>
+            <a href="https://twitter.com/misori_simon">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
           </span>
           <span class="social-icon-item">
-            <a href="#"></a>
-          </span>
-          <span class="social-icon-item">
-            <a href="#"></a>
-          </span>
-          <span class="social-icon-item">
-            <a href="#"></a>
+            <a href="#">
+              <i class="fa fa-reddit" aria-hidden="true"></i>
+            </a>
           </span>
         </div>
       </div>
@@ -56,7 +59,10 @@
       <h2 class="section-header">My best works</h2>
       <div class="projects-wrap">
         <div class="project">
-          <h3 class="project-title">Title</h3>
+          <div class="project-image">
+            <h3 class="project-title">Title</h3>
+            <img src="images/" alt="image">
+          </div>
           <div class="project-languages">
             <span class="language-item">HTML/CSS</span>
             <span class="language-item">Ruby on Rails</span>
@@ -68,33 +74,40 @@
           <div class="project-modal">
             <div class="main-image">
               <img src="images/" alt="">
-              <span class="close-modal"></span>
+              <span class="close-modal"><i class="fa fa-times" aria-hidden="true"></i></span>
             </div>
             <div class="modal-gallery-btn-wrap">
               <div class="project-gallery">
-                <span class="galley-item"><img src="images/" alt=""></span>
-                <span class="galley-item"><img src="images/" alt=""></span>
-                <span class="galley-item"><img src="images/" alt=""></span>
+                <span class="gallery-item"><img src="images/" alt=""></span>
+                <span class="gallery-item"><img src="images/" alt=""></span>
+                <span class="gallery-item"><img src="images/" alt=""></span>
               </div>
               <div class="modal-btn-wrap">
-                <div class="btn-with-icon">
+                <a href="#" class="btn-with-icon">
                   <span>Live Demo</span>
-                  <span>icon</span>
-                </div>
-                <div class="btn-with-icon">
-                  <span>Live Demo</span>
-                  <span>icon</span>
-                </div>
+                  <span class="project-link-icon"><i class="fa fa-external-link" aria-hidden="true"></i></span>
+                </a>
+                <a href="#" class="btn-with-icon">
+                  <span>See code</span>
+                  <span class="project-link-icon"><i class="fa fa-github" aria-hidden="true"></i></span>
+                </a>
+
               </div>
             </div>
             <div class="project-info">
-              <h3 class="project-title">Title</h3>
+              <h3 class="project-modal-title">Title</h3>
               <div class="project-languages">
                 <span class="language-item">HTML/CSS</span>
                 <span class="language-item">Ruby on Rails</span>
                 <span class="language-item">Javascript</span>
               </div>
-              <p class="about-project"></p>
+              <p class="about-project">
+                Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit. Ducimus, pariatur vitae accusantium ratione
+                iste quasi consectetur similique atque doloremque
+                eveniet adipisci vel, dolore inventore quis
+                consequatur explicabo. Dolore, eaque nam.
+              </p>
             </div>
           </div>
         </div>
@@ -103,7 +116,14 @@
     <section class="section about">
       <div class="general-info">
         <h3 class="section-header">About me</h3>
-        <p class="about-me"></p>
+        <p class="about-me">
+          Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Fugiat facere quia ipsa
+          blanditiis culpa rerum aliquid, voluptate
+          at neque exercitationem, incidunt minus
+          numquam illum odio architecto deserunt,
+          alias voluptatibus repellendus!
+        </p>
         <p class="my-resume"><a href="">get my resume</a></p>
       </div>
       <div class="technical-info">
@@ -132,14 +152,16 @@
             <span class="technical-item">Bulma</span>
             <span class="technical-item">Github</span>
             <span class="technical-item">Terminal</span>
+            <span class="technical-item">Rspec</span>
+            <span class="technical-item">Capybara</span>
           </div>
         </div>
       </div>
     </section>
     <section class="section contact">
       <h3 class="contact-header">Contact header</h3>
-      <p>if yu blah blah blah for whatever reason for vlach blah blah</p>
-      <form action="?" method="post">
+      <p class="contact-message">if yu blah blah blah for whatever reason for vlach blah blah whatever reason for vlach blah blah</p>
+      <form action="?" method="post" class="contact-form">
         <div class="form-group">
           <input type="text" name="name" id="name" placeholder="Name">
           <input type="email" name="email" id="email" placeholder="Email">
@@ -147,9 +169,41 @@
         <div class="form-group">
           <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter message"></textarea>
         </div>
+        <div class="form-group">
+          <button type="submit" name="submit"> Get in touch</button>
+        </div>
       </form>
     </section>
   </main>
-
+  <footer class="footer">
+    <div class="contact-info">
+      <p class="my-email">misorisimon@gmail.com</p>
+      <div class="social-icon-wrap">
+        <span class="social-icon-item">
+          <a href="https://github.com/Misori-simon/">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+        </span>
+        <span class="social-icon-item">
+          <a href="https://cm.linkedin.com/in/misori-simon-05906219b">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </span>
+        <span class="social-icon-item">
+          <a href="https://twitter.com/misori_simon">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+        </span>
+        <span class="social-icon-item">
+          <a href="#">
+            <i class="fa fa-reddit" aria-hidden="true"></i>
+          </a>
+        </span>
+      </div>
+    </div>
+    <div class="bottom-footer">
+      &copy;2021 Misori Simon
+    </div>
+  </footer>
 </body>
 </html>
