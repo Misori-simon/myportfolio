@@ -1,3 +1,36 @@
+.fade-in {
+  animation: fade-in ease 0.35s;
+  -webkit-animation: fade-in ease-in 0.35s;
+  -moz-animation: fade-in ease-in 0.35s;
+  -o-animation: fade-in ease-in 0.35s;
+  -ms-animation: fade-in ease-in 0.35s;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .main {
   padding-top: 3.5rem;
 }
@@ -48,25 +81,40 @@
   }
 
   .view-project {
+    display: block;
     background-color: black;
     text-align: center;
     padding: 0.2rem 0;
     margin-bottom: 1rem;
 
-    button {
+    a {
+      display: block;
       font-size: small;
       background-color: transparent;
       color: white;
     }
   }
 
+  .project-modal-wrap {
+    position: absolute;
+    display: none;
+    height: 200vh;
+    opacity: 0;
+    padding: 1rem;
+    z-index: 500;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: blue;
+    transition: opacity 1s ease-out;
+    transition-delay: 2s;
+  }
+
   .project-modal {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // right: 0;
-    background-color: rgba($color: #e9d3d3, $alpha: 1);
+    background-color: rgba($color: #fff, $alpha: 1);
     padding-bottom: 1rem;
+    margin: auto;
 
     .main-image {
       position: relative;
@@ -129,6 +177,11 @@
     .project-modal-title {
       font-size: 1.3rem;
     }
+  }
+
+  #project-1-wrap:target {
+    display: block;
+    opacity: 1;
   }
 
   .my-resume {
