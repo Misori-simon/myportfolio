@@ -94,12 +94,18 @@ root {
   .nav {
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    max-width: 1140px;
+    padding: 0 4rem; }
     .nav .nav-item {
       float: left; }
+    .nav .nav-item a {
+      padding-right: 0;
+      padding-left: 1.5rem; }
     .nav .nav-wrap {
       clear: none;
       float: right;
+      background: none;
       max-height: none; }
     .nav .menu-icon {
       display: none; } }
@@ -243,9 +249,9 @@ root {
       background-color: transparent;
       color: white; }
   .section .project-modal-wrap {
-    position: absolute;
+    position: fixed;
     display: none;
-    height: 200vh;
+    height: 100vh;
     opacity: 0;
     padding: 1rem;
     z-index: 500;
@@ -259,7 +265,9 @@ root {
   .section .project-modal {
     background-color: white;
     padding-bottom: 1rem;
-    margin: auto; }
+    margin: auto;
+    overflow: scroll;
+    height: 100%; }
     .section .project-modal .main-image {
       position: relative;
       min-height: 12rem;
@@ -271,7 +279,9 @@ root {
       font-size: 1.4rem;
       height: 2rem;
       width: 2rem;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background-color: black;
       color: white; }
     .section .project-modal .modal-gallery-btn-wrap {
@@ -304,7 +314,8 @@ root {
       padding: 0 0.5rem; }
     .section .project-modal .project-modal-title {
       font-size: 1.3rem; }
-  .section #project-1-wrap:target {
+  .section #project-1-wrap:target,
+  .section #project-2-wrap:target {
     display: block;
     opacity: 1; }
   .section .my-resume {
@@ -369,5 +380,105 @@ root {
     margin: 0.5rem 0;
     padding: 1rem 0 0.5rem;
     border-top: 1px solid white; }
+
+@media (min-width: 768px) {
+  .page-wrap {
+    max-width: 1140px;
+    margin: 0 auto; }
+
+  .section {
+    padding: 1rem 4rem; }
+    .section .social-wrap {
+      margin: 3rem 0;
+      display: flex;
+      align-items: center; }
+    .section .social-header {
+      margin-right: 1rem; }
+    .section .section-header {
+      font-size: 1.6rem; }
+    .section .section-info {
+      max-width: 70ch; }
+    .section .projects-wrap {
+      display: flex;
+      flex-wrap: wrap; }
+      .section .projects-wrap .odd {
+        padding-right: 0.5rem; }
+      .section .projects-wrap .even {
+        padding-left: 0.5rem; }
+    .section .project-title {
+      left: 1.5rem;
+      font-size: 1.5rem; }
+    .section .project > .project-languages {
+      display: none;
+      position: absolute;
+      top: 3rem;
+      left: 1.5rem; }
+    .section .view-project {
+      display: none;
+      position: absolute;
+      padding: 1rem 2rem;
+      bottom: 2rem;
+      margin-bottom: 0;
+      left: 1.5rem; }
+    .section .project {
+      width: 50%;
+      min-height: 20rem;
+      position: relative;
+      background-color: green;
+      margin-bottom: 1rem; }
+      .section .project:hover > .project-languages, .section .project:hover .view-project {
+        display: block; }
+    .section .my-resume {
+      margin: 1.5rem 0; }
+    .section .contact-wrap {
+      max-width: 30rem;
+      margin: 0 auto; }
+    .section .contact-header {
+      font-size: 1.6rem; }
+    .section .contact-message {
+      padding: 1rem 1.5rem; }
+    .section .project-modal {
+      padding-bottom: 3rem;
+      max-width: 1024px;
+      margin: 0 auto; }
+      .section .project-modal .main-image {
+        min-height: 25rem;
+        background-color: pink; }
+      .section .project-modal .close-modal {
+        height: 3rem;
+        width: 3rem; }
+      .section .project-modal .modal-gallery-btn-wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0 4rem; }
+      .section .project-modal .project-info {
+        padding: 0 4rem; }
+      .section .project-modal .project-gallery {
+        flex: 1;
+        max-width: 20rem; }
+      .section .project-modal .modal-btn-wrap {
+        flex: 1;
+        max-width: 12rem; }
+      .section .project-modal .btn-with-icon {
+        padding: 1rem 0; }
+      .section .project-modal .project-modal-title {
+        font-size: 1.6rem; }
+
+  .intro .intro-header {
+    font-size: 3rem; }
+
+  .about {
+    display: flex;
+    margin-bottom: 3rem; }
+
+  .general-info {
+    flex: 1; }
+
+  .about-me {
+    max-width: 40ch; }
+
+  .technical-info {
+    flex: 1; } }
 
 /*# sourceMappingURL=styles.css.map */

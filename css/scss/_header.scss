@@ -99,14 +99,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1140px;
+    padding: 0 4rem;
 
     .nav-item {
       float: left;
     }
 
+    .nav-item a {
+      padding-right: 0;
+      padding-left: 1.5rem;
+    }
+
     .nav-wrap {
       clear: none;
       float: right;
+      background: none;
       max-height: none;
     }
 
