@@ -1,10 +1,12 @@
 //navigations
-.header {
+
+.nav {
   background-color: gray;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   z-index: 3;
+  height: 3.5rem;
 
   .nav-wrap {
     overflow: hidden;
@@ -39,6 +41,9 @@
     position: relative;
     float: right;
     cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 
   .nav-icon {
@@ -89,7 +94,7 @@
 }
 
 @media (min-width: 768px) {
-  .header {
+  .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;

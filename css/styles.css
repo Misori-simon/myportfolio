@@ -25,44 +25,48 @@ root {
   line-height: 1.5;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
-.header {
+.nav {
   background-color: gray;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
-  z-index: 3; }
-  .header .nav-wrap {
+  z-index: 3;
+  height: 3.5rem; }
+  .nav .nav-wrap {
     overflow: hidden;
     clear: both;
     max-height: 0;
     transition: max-height 0.2s ease-out; }
-  .header .nav-item a {
+  .nav .nav-item a {
     display: block;
     padding: 0.5rem; }
-  .header .nav-item a:hover {
+  .nav .nav-item a:hover {
     background-color: black; }
-  .header .logo-wrap {
+  .nav .logo-wrap {
     float: left;
     display: block;
     font-size: 2rem;
     padding: 0.5rem; }
-  .header .menu-btn {
+  .nav .menu-btn {
     display: none; }
-  .header .menu-icon {
+  .nav .menu-icon {
     padding: 1rem;
     border: 1px solid black;
     position: relative;
     float: right;
-    cursor: pointer; }
-  .header .nav-icon {
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+  .nav .nav-icon {
     background: #333;
     display: block;
     height: 2px;
     width: 20px;
     position: relative;
     transition: background 0.2s ease-out; }
-  .header .nav-icon::before,
-  .header .nav-icon::after {
+  .nav .nav-icon::before,
+  .nav .nav-icon::after {
     background: #333;
     content: '';
     display: block;
@@ -70,34 +74,102 @@ root {
     width: 100%;
     position: absolute;
     transition: all 0.2s ease-out; }
-  .header .nav-icon::before {
+  .nav .nav-icon::before {
     top: 5px; }
-  .header .nav-icon::after {
+  .nav .nav-icon::after {
     bottom: 5px; }
-  .header .menu-btn:checked ~ .nav-wrap {
+  .nav .menu-btn:checked ~ .nav-wrap {
     max-height: 300px; }
-  .header .menu-btn:checked ~ .menu-icon .nav-icon {
+  .nav .menu-btn:checked ~ .menu-icon .nav-icon {
     background: transparent; }
-  .header .menu-btn:checked ~ .menu-icon .nav-icon::before {
+  .nav .menu-btn:checked ~ .menu-icon .nav-icon::before {
     transform: rotate(-45deg);
     top: 0; }
-  .header .menu-btn:checked ~ .menu-icon .nav-icon::after {
+  .nav .menu-btn:checked ~ .menu-icon .nav-icon::after {
     transform: rotate(45deg);
     top: 0; }
 
 @media (min-width: 768px) {
-  .header {
+  .nav {
     display: flex;
     align-items: center;
     justify-content: space-between; }
-    .header .nav-item {
+    .nav .nav-item {
       float: left; }
-    .header .nav-wrap {
+    .nav .nav-wrap {
       clear: none;
       float: right;
       max-height: none; }
-    .header .menu-icon {
+    .nav .menu-icon {
       display: none; } }
+.fab-wrap {
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  z-index: 700;
+  cursor: pointer; }
+
+.fab-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #094235;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  margin-left: 0.5rem; }
+  .fab-icon i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.8rem;
+    color: #fff; }
+
+.fab-icon:hover {
+  opacity: 0.8; }
+
+.fab-options {
+  list-style: none;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  opacity: 0;
+  border: 2px solid red;
+  padding: 1rem 0;
+  transition: all 0.3s ease-out;
+  transform: scale(0);
+  transform-origin: 85% bottom; }
+  .fab-options:hover {
+    opacity: 1;
+    transform: scale(1); }
+  .fab-options li {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.2rem 0; }
+
+.fab-btn {
+  width: 50px;
+  height: 50px;
+  background: red; }
+  .fab-btn:hover ~ .fab-options {
+    opacity: 1;
+    transform: scale(1); }
+
+.fab-label {
+  padding: 2px 5px;
+  align-self: center;
+  user-select: none;
+  white-space: nowrap;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  background-color: black;
+  color: white; }
+
+.main {
+  padding-top: 3.5rem; }
+
 .social-icon-item {
   display: inline-block;
   margin-right: 0.5rem;
@@ -237,10 +309,10 @@ root {
   color: white;
   text-align: center;
   font-size: small; }
+  .footer .social-icon-item a {
+    color: white; }
   .footer .my-email {
     padding: 0.5rem 0; }
-  .footer a {
-    color: white; }
   .footer .bottom-footer {
     margin: 0.5rem 0;
     padding: 1rem 0 0.5rem;
