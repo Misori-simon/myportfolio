@@ -1,0 +1,206 @@
+//font for headings :font-family: 'Montserrat', sans-serif;
+.body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.page-wrap {
+  font-size: 1.1rem;
+}
+//for layout/header
+.logo-wrap {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: $pri-color;
+}
+
+.nav-item a {
+  color: #000;
+  font-weight: 300;
+}
+
+//for pages/index
+.social-icon-item {
+  font-size: 1.4rem;
+}
+
+.thin-font {
+  font-weight: 200;
+}
+
+.about-me {
+  line-height: 1.6;
+
+  .thin-font {
+    font-size: 1.3rem;
+  }
+}
+
+.section {
+  .social-header {
+    font-size: 1.1rem;
+    color: $dark-gray;
+  }
+
+  .social-icon-item {
+    a {
+      color: $pri-color;
+      font-size: 2rem;
+    }
+  }
+
+  .section-header {
+    font-size: 1.4rem;
+  }
+
+  .section-info {
+    .thin-font {
+      font-size: 1.5rem;
+      color: $ter-color;
+    }
+  }
+
+  .language-item {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .view-project {
+    text-align: center;
+
+    a {
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+    }
+  }
+
+  .project-modal {
+    .close-modal {
+      font-size: 1.4rem;
+      color: white;
+    }
+
+    .btn-with-icon {
+      color: white;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: bold;
+
+      .project-link-icon {
+        font-size: 1.2rem;
+      }
+    }
+
+    .project-modal-title {
+      font-size: 1.3rem;
+    }
+  }
+
+  .my-resume {
+    a {
+      color: white;
+      font-weight: 600;
+    }
+  }
+
+  .technical-header {
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+
+  .technical-item {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .contact-header {
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+  }
+
+  .form-group {
+    input {
+      font-size: 1rem;
+    }
+
+    textarea {
+      font-size: 1.1rem;
+    }
+
+    button {
+      font-size: 1rem;
+      font-weight: 700;
+      color: $sec-color;
+    }
+  }
+}
+
+.intro {
+  .intro-header {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+}
+
+.contact {
+  p {
+    color: white;
+    font-size: 1rem;
+  }
+}
+
+.footer {
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+
+  .social-icon-item a {
+    color: white;
+  }
+}
+
+@media (min-width: 768px) {
+  //for layout/header
+  .nav-item a {
+    &:hover,
+    &:active {
+      color: $pri-color;
+    }
+  }
+
+  //for pages/index
+  .section {
+    .section-header {
+      font-size: 1.6rem;
+    }
+
+    .project-title {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+
+    .contact-header {
+      font-size: 1.6rem;
+    }
+
+    .project-modal {
+      .project-modal-title {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .intro {
+    .intro-header {
+      font-size: 3rem;
+    }
+  }
+
+  .language-item {
+    font-size: 1rem;
+  }
+}
