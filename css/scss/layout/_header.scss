@@ -1,19 +1,20 @@
 //navigations
 
 .nav {
-  background-color: gray;
+  background-color: $sec-color;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
-  z-index: 3;
+  z-index: 30;
   height: 3.5rem;
 
   .nav-wrap {
-    background-color: azure;
+    background-color: $sec-color;
     overflow: hidden;
     clear: both;
     max-height: 0;
     transition: max-height 0.2s ease-out;
+    border-top: 2px solid $dark-sec;
   }
 
   .nav-item a {
@@ -22,14 +23,15 @@
   }
 
   .nav-item a:hover {
-    background-color: black;
+    background-color: $dark-sec;
   }
 
   .logo-wrap {
     float: left;
-    display: block;
-    font-size: 2rem;
-    padding: 0.2rem 0.5rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0.2rem 0.2rem 0.5rem 0;
   }
 
   .menu-btn {
@@ -38,7 +40,6 @@
 
   .menu-icon {
     padding: 1rem;
-    border: 1px solid black;
     position: relative;
     float: right;
     cursor: pointer;
@@ -48,7 +49,7 @@
   }
 
   .nav-icon {
-    background: #333;
+    background: $pri-color;
     display: block;
     height: 2px;
     width: 20px;
@@ -58,7 +59,7 @@
 
   .nav-icon::before,
   .nav-icon::after {
-    background: #333;
+    background: $pri-color;
     content: '';
     display: block;
     height: 100%;
@@ -99,7 +100,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1140px;
+    max-width: 1300px;
     padding: 0 4rem;
 
     .nav-item {
@@ -111,11 +112,16 @@
       padding-left: 1.5rem;
     }
 
+    .nav-item a:hover {
+      background-color: transparent;
+    }
+
     .nav-wrap {
       clear: none;
       float: right;
       background: none;
       max-height: none;
+      border: none;
     }
 
     .menu-icon {

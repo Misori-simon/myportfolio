@@ -31,6 +31,10 @@
   100% { opacity: 1; }
 }
 
+.body {
+  background-color: $sec-color;
+}
+
 .main {
   padding-top: 3.5rem;
 }
@@ -38,7 +42,6 @@
 .social-icon-item {
   display: inline-block;
   margin-right: 0.5rem;
-  font-size: 1.4rem;
 }
 
 .section {
@@ -48,24 +51,27 @@
     margin: 0.5rem 0;
   }
 
-  .social-header {
-    font-size: 1rem;
-  }
-
   .section-header {
-    font-size: 1.4rem;
     margin-bottom: 1rem;
   }
 
+  .project {
+    margin-bottom: 2rem;
+  }
+
   .project-image {
-    background-color: aquamarine;
-    min-height: 12rem;
     position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   .project-title {
     position: absolute;
-    top: 1rem;
+    top: 2.5rem;
     left: 1rem;
   }
 
@@ -74,24 +80,20 @@
   }
 
   .language-item {
-    font-size: small;
-    color: #fff;
-    padding: 0.2rem;
-    background-color: black;
+    padding: 0.3rem 0.5rem;
+    border-radius: 15px;
+    background-color: $ter-color;
   }
 
   .view-project {
     display: block;
-    background-color: black;
-    text-align: center;
-    padding: 0.2rem 0;
+    background-color: $pri-color;
+    padding: 0.5rem 0;
     margin-bottom: 1rem;
 
     a {
       display: block;
-      font-size: small;
       background-color: transparent;
-      color: white;
     }
   }
 
@@ -106,7 +108,6 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: blue;
     transition: opacity 1s ease-out;
     transition-delay: 2s;
   }
@@ -120,26 +121,29 @@
 
     .main-image {
       position: relative;
-      min-height: 12rem;
-      background-color: yellowgreen;
+      border: 1px solid darken($color: $pri-color, $amount: 15%);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
     .close-modal {
       position: absolute;
       top: 0;
       right: 0;
-      font-size: 1.4rem;
       height: 2rem;
       width: 2rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: black;
-      color: white;
+      background-color: $pri-color;
     }
 
     .modal-gallery-btn-wrap {
-      padding: 0 0.5rem;
+      padding: 0 1rem;
     }
 
     .project-gallery {
@@ -150,52 +154,55 @@
 
     .gallery-item {
       display: inline-block;
-      min-width: 30%;
+      width: 32%;
       min-height: 4rem;
-      background-color: black;
+      border: 1px solid darken($color: $pri-color, $amount: 15%);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
     .btn-with-icon {
       display: block;
-      background-color: black;
-      color: white;
+      background-color: $pri-color;
       margin: 0.5rem 0;
-      text-align: center;
       padding: 0.5rem 0;
-      font-size: small;
-      font-weight: bold;
       position: relative;
 
       .project-link-icon {
         position: absolute;
         right: 1rem;
-        font-size: 1.2rem;
       }
+    }
+
+    .about-project {
+      margin-top: 1rem;
     }
 
     .project-info {
       margin-top: 1rem;
-      padding: 0 0.5rem;
-    }
-
-    .project-modal-title {
-      font-size: 1.3rem;
+      padding: 0 1rem;
     }
   }
 
   #project-1-wrap:target,
-  #project-2-wrap:target {
+  #project-2-wrap:target,
+  #project-3-wrap:target,
+  #project-4-wrap:target {
     display: block;
     opacity: 1;
+    background-color: rgba($color: $sec-color, $alpha: 0.6);
   }
 
   .my-resume {
     margin: 0.5rem 0;
 
     a {
-      background-color: black;
+      background-color: $pri-color;
       display: inline-block;
-      color: white;
       padding: 1rem 2rem;
     }
   }
@@ -206,19 +213,14 @@
   }
 
   .technical-header {
-    font-size: 0.9rem;
     margin: 0.5rem 0;
   }
 
   .technical-item {
-    font-size: small;
     padding: 0.2rem 1rem 0.2rem 0;
   }
 
   .contact-header {
-    font-size: 1.2rem;
-    color: white;
-    text-align: center;
     margin: 0.5rem 0;
   }
 
@@ -232,49 +234,30 @@
       padding: 1rem;
       margin-bottom: 0.5rem;
       width: 100%;
-      font-size: 1rem;
-    }
-
-    textarea {
-      font-size: 1.2rem;
     }
 
     button {
-      background-color: yellow;
+      background-color: #000;
       padding: 1rem;
       width: 100%;
-      font-size: small;
-      font-weight: bold;
     }
   }
 }
 
 .intro {
   .intro-header {
-    font-size: 1.6rem;
     margin: 0.5rem 0;
+    max-width: 15ch;
   }
 }
 
 .contact {
-  background-color: black;
-
-  p {
-    color: white;
-    font-size: 0.8rem;
-  }
+  background-color: $pri-color;
 }
 
 .footer {
   padding: 0 1rem 1rem;
-  background-color: black;
-  color: white;
-  text-align: center;
-  font-size: small;
-
-  .social-icon-item a {
-    color: white;
-  }
+  background-color: $pri-color;
 
   .my-email {
     padding: 0.5rem 0;
@@ -289,7 +272,7 @@
 
 @media (min-width: 768px) {
   .page-wrap {
-    max-width: 1140px;
+    max-width: 1300px;
     margin: 0 auto;
   }
 
@@ -306,12 +289,8 @@
       margin-right: 1rem;
     }
 
-    .section-header {
-      font-size: 1.6rem;
-    }
-
     .section-info {
-      max-width: 70ch;
+      max-width: 60ch;
     }
 
     .projects-wrap {
@@ -329,13 +308,17 @@
 
     .project-title {
       left: 1.5rem;
-      font-size: 1.5rem;
+      top: 4rem;
+    }
+
+    .project-image {
+      height: unset;
     }
 
     .project > .project-languages {
       display: none;
       position: absolute;
-      top: 3rem;
+      top: 6rem;
       left: 1.5rem;
     }
 
@@ -352,12 +335,27 @@
       width: 50%;
       min-height: 20rem;
       position: relative;
-      background-color: green;
-      margin-bottom: 1rem;
+      margin: 1rem auto;
+
+      &:hover {
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.5);
+          z-index: 10;
+        }
+      }
+
+      &:hover .project-title {
+        z-index: 20;
+      }
 
       &:hover > .project-languages,
       &:hover .view-project {
         display: block;
+        z-index: 20;
       }
     }
 
@@ -368,10 +366,6 @@
     .contact-wrap {
       max-width: 30rem;
       margin: 0 auto;
-    }
-
-    .contact-header {
-      font-size: 1.6rem;
     }
 
     .contact-message {
@@ -385,7 +379,6 @@
 
       .main-image {
         min-height: 25rem;
-        background-color: pink;
       }
 
       .close-modal {
@@ -406,7 +399,7 @@
 
       .project-gallery {
         flex: 1;
-        max-width: 20rem;
+        max-width: 65%;
       }
 
       .modal-btn-wrap {
@@ -417,16 +410,6 @@
       .btn-with-icon {
         padding: 1rem 0;
       }
-
-      .project-modal-title {
-        font-size: 1.6rem;
-      }
-    }
-  }
-
-  .intro {
-    .intro-header {
-      font-size: 3rem;
     }
   }
 
