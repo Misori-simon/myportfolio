@@ -388,8 +388,7 @@ root {
     overflow: scroll;
     height: 100%; }
     .section .project-modal .main-image {
-      position: relative;
-      border: 1px solid #f64e11; }
+      position: relative; }
       .section .project-modal .main-image img {
         width: 100%;
         height: 100%;
@@ -413,8 +412,7 @@ root {
     .section .project-modal .gallery-item {
       display: inline-block;
       width: 32%;
-      min-height: 4rem;
-      border: 1px solid #f64e11; }
+      min-height: 4rem; }
       .section .project-modal .gallery-item img {
         width: 100%;
         height: 100%;

@@ -121,7 +121,7 @@
 
     .main-image {
       position: relative;
-      border: 1px solid darken($color: $pri-color, $amount: 15%);
+      // +border: 1px solid darken($color: $pri-color, $amount: 15%);
 
       img {
         width: 100%;
@@ -156,7 +156,7 @@
       display: inline-block;
       width: 32%;
       min-height: 4rem;
-      border: 1px solid darken($color: $pri-color, $amount: 15%);
+      // border: 1px solid darken($color: $pri-color, $amount: 15%);
 
       img {
         width: 100%;
